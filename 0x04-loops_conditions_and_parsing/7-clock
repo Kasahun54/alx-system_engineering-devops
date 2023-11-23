@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# this script print hours from 0 to 12 and minutes from 1 up to 59
+
+h=0
+
+while [ $h -lt 13 ]; do
+      echo "h: $h"
+      i=1
+      while [ $i -le 59 ]; do
+      	  echo "$i"
+	  i=$((i+1))
+      done
+      h=$((h+1))
+done
+
