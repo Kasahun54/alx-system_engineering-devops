@@ -2,5 +2,17 @@
 # script that groups visitors by IP and HTTP status code,
 # and displays this data.
 
-awk '{ printf "%s %s\n", $1, $9 }' "apache-access.log" | sort | uniq -c | sort -nr
+LOG_FILE="access.log"
+
+awk '{
+  ip = $1
+  httpCode = $9
+  key = ip " " httpCode
+  occurrences[key]++
+}
+END {
+  for (k in occurrences) {
+    print occurrences[k], k
+  }
+}' "${LOG_FILE}" | sort -rn
 
