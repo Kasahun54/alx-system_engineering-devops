@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# print the message infinity and beyond
+
+trap "echo 'I am invincible!!!'" 15
+
+
+# displays this message forever
+while true;
+do
+	echo "To infinity and beyond";
+	sleep 2
+done
+
