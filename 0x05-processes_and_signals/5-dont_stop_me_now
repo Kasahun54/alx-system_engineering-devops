@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# distroye the infinity and beyond
+
+# Geting pid 
+id=$(pgrep "bash ./4-to_infinity_and_beyond" -f)
+
+# Terminate the process
+if [ -n "$id" ]
+then
+  kill -15 "$id"
+fi
+
