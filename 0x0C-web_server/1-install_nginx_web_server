@@ -11,7 +11,7 @@ echo -e "\nSetting up some minor stuff.\n"
 sudo service nginx start
 
 sudo ufw allow 'Nginx HTTP'
-
+ 
 sudo chown -R "$USER":"$USER" /var/www/html
 sudo chmod -R 755 /var/www
 
